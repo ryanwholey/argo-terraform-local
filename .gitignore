@@ -1,0 +1,6 @@
+bin/
+*.tfstate*
+.terraform/
+*.log
+
+
