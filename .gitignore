@@ -1,5 +1,6 @@
 bin/
-*.tfstate*
+*.tfstate
+*.tfstate.*
 .terraform/
 *.log
 
