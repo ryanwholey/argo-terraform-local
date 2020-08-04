@@ -1,0 +1,6 @@
+[submodule "test-app-helm"]
+	path = test-app-helm
+	url = git@github.com:ryanwholey/test-app-helm.git
+[submodule "test-app"]
+	path = test-app
+	url = git@github.com:ryanwholey/test-app.git
