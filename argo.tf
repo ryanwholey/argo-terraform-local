@@ -28,27 +28,27 @@ resource "null_resource" "argo_events" {
   }
 }
 
-resource "kubectl_manifest" "webhook" {
-  yaml_body = <<-EOF
-    apiVersion: argoproj.io/v1alpha1
-    kind: EventSource
-    metadata:
-      name: webhook
-      namespace: ${kubernetes_namespace.argo_events.metadata[0].name}
-    spec:
-      service:
-        ports:
-          - port: 12000
-            targetPort: 12000
-      webhook:
-        example:
-          port: "12000"
-          endpoint: /
-          method: POST
-  EOF
+# resource "kubectl_manifest" "webhook" {
+#   yaml_body = <<-EOF
+#     apiVersion: argoproj.io/v1alpha1
+#     kind: EventSource
+#     metadata:
+#       name: webhook
+#       namespace: ${kubernetes_namespace.argo_events.metadata[0].name}
+#     spec:
+#       service:
+#         ports:
+#           - port: 12000
+#             targetPort: 12000
+#       webhook:
+#         example:
+#           port: "12000"
+#           endpoint: /
+#           method: POST
+#   EOF
 
-  depends_on = [null_resource.argo_events]
-}
+#   depends_on = [null_resource.argo_events]
+# }
 
 # resource "helm_release" "argo_events" {
 #   name       = "argo-events"
