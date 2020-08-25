@@ -1,0 +1,16 @@
+#!/bin/bash
+
+export TF_VAR_admin_password="password"
+
+export TF_VAR_slack_token=<token>
+
+export TF_VAR_circleci_organization=<org>
+export TF_VAR_circleci_token=<token>
+
+export TF_VAR_argocd_auth_token=<token>
+export TF_VAR_argocd_url=<argo-url-no-protocol>
+export TF_VAR_local_argocd_url=<local-argo-url>
+
+export TF_VAR_source_repo_url=<url>
+export TF_VAR_test_app_staging_url=<staging-deploy-url> // used for notification links
+export TF_VAR_test_app_production_url=<production-deploy-url> // used for notification links

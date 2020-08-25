@@ -4,7 +4,7 @@ provider "kubernetes" {}
 
 provider "kubectl" {}
 
-# provider "kubernetes-alpha" {
-#   config_path = "~/.kube/config"
-# }
-
+provider "circleci" {
+  api_token    = var.circleci_token
+  organization = var.circleci_organization
+}

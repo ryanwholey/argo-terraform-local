@@ -3,7 +3,7 @@ FROM debian:buster
 RUN apt-get update && \
   apt-get install -y \
   git \
-  vim
-
+  vim \
+  curl
 
 COPY merge-release.sh merge-release.sh
